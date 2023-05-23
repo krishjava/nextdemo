@@ -1,9 +1,12 @@
+"use client";
 import Image from 'next/image'
 import styles from './page.module.css'
+import Navbar from './Navbar'
 
 export default function Home() {
   return (
     <main className={styles.main}>
+      <Navbar/>
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
