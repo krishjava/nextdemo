@@ -13,6 +13,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   // const [state, setState] = useState(""); 
+  const data = async ()=>{
+    const res = await fetch('https://100paisa.000webhostapp.com/rest.php');
+    const result= await res.json(); 
+    console.log(`res ${JSON.stringify(result)}`);
+  }
+
+  useEffect(()=>{
+    data();
+  })
   return (
     <html lang="en">
       

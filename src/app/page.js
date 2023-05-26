@@ -1,13 +1,27 @@
 "use client";
-import Image from 'next/image'
-import styles from './page.module.css'
-import Navbar from './Navbar'
+import Image from "next/image";
+import styles from "./page.module.css";
+import Navbar from "./Navbar";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <Navbar/>
-      <div className={styles.description}>
+      {/* <Navbar /> */}
+      <Container>
+      <Row>
+        <Col sm={8}>sm=8</Col>
+        <Col sm={4}>sm=4</Col>
+      </Row>
+      <Row>
+        <Col sm>sm=true</Col>
+        <Col sm>sm=true</Col>
+        <Col sm>sm=true</Col>
+      </Row>
+    </Container>
+      {/* <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
           <code className={styles.code}>src/app/page.js</code>
@@ -92,7 +106,7 @@ export default function Home() {
             Instantly deploy your Next.js site to a shareable URL with Vercel.
           </p>
         </a>
-      </div>
+      </div> */}
     </main>
-  )
+  );
 }
